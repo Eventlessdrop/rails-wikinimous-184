@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
   def index
-    
+    @articles = Articles.all
   end
 
   def new
+    @article = Articles.create(articles_params)
   end
 
   def show
@@ -20,4 +21,7 @@ class ArticlesController < ApplicationController
 
   def destroy
   end
+
+  private
+  
 end
